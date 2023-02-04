@@ -9,6 +9,9 @@ Docker (https://www.docker.com/products/docker-desktop)
 Node.js (https://nodejs.org/en/download/)
 
 npm (Node Package Manager) (comes with Node.js)
+
+Create your own Imgflip api account form web [https://imgflip.com/api]
+
 ## Installation
 Clone the repository to your local machine:
 ```
@@ -18,6 +21,10 @@ git clone https://github.com/sunyux/Meme.git
 Navigate to the project directory:
 ```
 cd meme
+```
+Set your .env file with 
+```
+REACT_APP_API_ID=YOU_USER_NAME  REACT_APP_API_KEY=YOUR_PASSWORD
 ```
 
 Install the necessary packages:
@@ -43,8 +50,15 @@ docker push gcr.io/<your-project-id>/meme-generator-web-app
 
 Deploy the Docker container to Google Cloud Run:
 ```
-gcloud beta run deploy --image gcr.io/<your-project-id>/meme-generator-web-app
+gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/meme 
 ```
+
+Build the Docker image for the app
+
+Last run 
+
+```gcloud run deploy --image gcr.io/${GOOGLE_CLOUD_PROJECT}/meme --set-env-vars REACT_APP_API_ID=YOU_USER_NAME,REACT_APP_API_KEY=YOUR_PASSWORD```
+Use cloud run build the app
 
 ## Usage
 Once the application is running, simply navigate to the URL provided by Google Cloud Run to use the meme generator. Choose an image, add text to it, and generate your custom meme!
