@@ -1,7 +1,7 @@
 
-import React, { PropTypes } from 'react'
+import React from 'react'
 import {Meme} from '../Meme/Meme';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import {Result} from '../Result/Result'
 import styles from './Style.module.css'
 //This function define the endpoints at which requests can be made
