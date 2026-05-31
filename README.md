@@ -1,5 +1,8 @@
 # Meme Generator Web Application
-You can see in this website(https://meme-me3odwmlxq-uw.a.run.app/)
+
+Live demo: [https://sunyux.github.io/Meme/](https://sunyux.github.io/Meme/)
+
+Previously hosted at [https://meme-me3odwmlxq-uw.a.run.app/](https://meme-me3odwmlxq-uw.a.run.app/)
 ## Introduction
 This is a simple meme generator web application that allows users to generate custom memes by choosing an image and adding text to it. This application was built using React as the front-end framework, Google Cloud Run as the hosting platform, and Docker as the containerization technology.
 
